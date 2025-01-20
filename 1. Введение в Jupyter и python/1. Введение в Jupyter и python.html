@@ -7519,7 +7519,7 @@ a.anchor-link {
 <h1 id="%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Jupyter-%D0%B8-Python">Введение в Jupyter и Python<a class="anchor-link" href="#%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-Jupyter-%D0%B8-Python">¶</a></h1><h2 id="%D0%A7%D1%82%D0%BE-%D0%B5%D1%81%D1%82%D1%8C-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82?">Что есть блокнот?<a class="anchor-link" href="#%D0%A7%D1%82%D0%BE-%D0%B5%D1%81%D1%82%D1%8C-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82?">¶</a></h2><p>Блокнот/нотбук $\text{---}$ это файл с разделениями на ячейки. Ячейки бывают двух типов $\text{---}$ для записей и комментариев (markdown) и для кода на Python (вообще говоря, можно писать и на других языках, но в нашем курсе будет рассматриваться только Python).</p>
 <h3 id="Markdown-(md)">Markdown (md)<a class="anchor-link" href="#Markdown-(md)">¶</a></h3><p>Markdown $\text{---}$ легковесный язык разметки текста. Это означает, что можно небольшими усилиями красиво оформить текст.</p>
 <p>Для редактирования/просмотра исходного текста $\text{---}$ нажмите дважды левой кнопкой мыши по ячейке. Для входа в режим просмотра $\text{---}$ нажмите галочку в верхнем правом углу блока или Ctrl+Enter (или Ctrl+Alt+Enter).</p>
-<p>Для заголовка в начале строке используйте символ "#". С помощью него можно разбивать текст на логические блоки, для подраздела используйте на один символ больше ("##"). Максимальная глубина разделения $\text{---}$ 6, аналогично <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> в HTML.</p>
+<p>Для заголовка в начале строке используйте символ "#". С помощью него можно разбивать текст на логические блоки, для подраздела используйте на один символ больше ("##"). Максимальная глубина разделения $\text{---}$ 6, аналогично <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> в HTML. Здесь можно использовать разметку HTML, в основном она используется только для оформления таблиц (но не обязательно, как вы увидете дальше), остальное, как <font color="#228B22">раскраска текста</font> используется крайне редко.</p>
 <p>Для создания нового абзаца нужна (как минимум) одна пустая строка.
 Если начать писать одну строку под другой они будут объединены в один абзац.</p>
 <p>Несколько пустых строк будут проигнорированы, разрыва текста не будет.</p>
@@ -7553,15 +7553,28 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Если нужен разрыв, то начните писать в новом блоке (между двумя блоками может быть несколько пустых).</p>
+<p>Если нужен разрыв, то начните писать в новом блоке (между двумя блоками может быть один или несколько пустых, но лучше так не делать).</p>
+<p>Примеры оформления текста:</p>
 <ul>
-<li><code>*</code>слово<code>*</code> или <code>_</code>слово<code>_</code> $\text{ --- }$ <em>слово</em></li>
-<li><code>**</code>слово<code>**</code> или <code>__</code>слово<code>__</code> $\text{ --- }$ <strong>слово</strong></li>
-<li><code>***</code>слово<code>***</code> или <code>___</code>слово<code>___</code> $\text{ --- }$ <em><strong>слово</strong></em></li>
-<li><code>~~</code>слово<code>~~</code> $\text{ --- }$ <del>слово</del></li>
+<li><code>*</code>слово<code>*</code> или <code>_</code>слово<code>_</code> $\text{---}$ <em>слово</em></li>
+<li><code>**</code>слово<code>**</code> или <code>__</code>слово<code>__</code> $\text{---}$ <strong>слово</strong></li>
+<li><code>***</code>слово<code>***</code> или <code>___</code>слово<code>___</code> $\text{---}$ <em><strong>слово</strong></em></li>
+<li><code>~~</code>слово<code>~~</code> $\text{---}$ <del>слово</del></li>
 <li>$\text{`}$ слово $\text{`}$ $\text{---}$ <code>слово</code></li>
 </ul>
-<p>Последний способ</p>
+<p>Последнее делает шрифт моноширинным и выделяет фон текста. Используется для того, чтобы выделить название переменной/класса/метода/etc в тексте. Например: "Переменная <code>cat_legs</code> равна $4$". Символ находится на кнопке, где тильда (<code>~</code>)/<code>ё</code> на английской раскладке, только без зажатия Shift. Для крупных фрагментов/листингов можно использовать окружение тремя апострофами (кстати говоря, эту и некоторые другие вещи поддерживает телеграм).</p>
+<p>Кстати, здесь вы увидели как сделать маркированный список (кроме <code>*</code>, можно использовать <code>+</code> и <code>-</code>). Нумерованный делается схожим образом:</p>
+<ol>
+<li>Вот</li>
+<li>Так</li>
+<li>Вот</li>
+</ol>
+<p>При этом вам не обязательно следить за правильностью нумерации в исходном тексте.</p>
+<ol>
+<li>What</li>
+<li>Tak</li>
+<li>What тоже можно</li>
+</ol>
 </div>
 </div>
 </div>
@@ -7572,6 +7585,196 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="LaTeX">LaTeX<a class="anchor-link" href="#LaTeX">¶</a></h3><p>Читается "лате<strong>х</strong>", а <strong>не</strong> "латекс".</p>
+<p>LaTeX предназначен для вёрстки математических текстов (и не только). Чтобы освоить его в полной мере нужно потратить не один десяток часов, но, благо, нам это и не нужно.</p>
+<p>Вот простые правила. Чтобы вставить формулу в текст, окружите её знаками $. Например: <code>$a^2 + b^2 = c^2$</code> даёт $a^2 + b^2 = c^2$. Для выделения формулы в отдельную строку и центрирования её используйте следующую запись:</p>
+<pre><code>$$
+a^2 + b^2 = c^2
+$$
+</code></pre>
+<p>что даст:
+$$
+a^2 + b^2 = c^2
+$$</p>
+<p>Вот таблица, ориентируясь на которую можно намного красивее оформлять свои формулы. Обратите внимание, что если в индексе (верхнем или нижнем), в дроби, под корнем и в других местах содержится более одного символа необходимо заключать эти символы в фигурные скобочки.</p>
+<table>
+<thead>
+<tr>
+<th>Обозначение</th>
+<th>Код LaTeX</th>
+<th>Отображение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Греческие буквы</td>
+<td><code>\alpha</code> <code>\beta</code> <code>\gamma</code> <code>\dots</code></td>
+<td>$\alpha$ $\beta$ $\gamma$ $\dots$</td>
+</tr>
+<tr>
+<td>Прописные греческие</td>
+<td><code>\Gamma</code> <code>\Delta</code> <code>\Omega</code> <code>\dots</code></td>
+<td>$\Gamma$ $\Delta$ $\Omega$ $\dots$</td>
+</tr>
+<tr>
+<td>Индексы и степени</td>
+<td><code>a_i^2</code>, <code>a_{i+1}^{n+1}</code></td>
+<td>$a_i^2$, $a_{i+1}^{n+1}$</td>
+</tr>
+<tr>
+<td>Дробь</td>
+<td><code>\frac{1}{2}</code></td>
+<td>$\frac{1}{2}$</td>
+</tr>
+<tr>
+<td>Корень</td>
+<td><code>\sqrt{x}</code>, <code>\sqrt[n]{x}</code></td>
+<td>$\sqrt{x}$, $\sqrt[n]{x}$</td>
+</tr>
+<tr>
+<td>Скобки</td>
+<td><code>\left( \frac{a}{b} \right)</code></td>
+<td>$\left(\frac{a}{b}\right)$</td>
+</tr>
+<tr>
+<td>Сумма</td>
+<td><code>\sum_{k=1}^{n}</code></td>
+<td>$\sum_{k=1}^{n}$</td>
+</tr>
+<tr>
+<td>Произведение</td>
+<td><code>\cdot</code>, <code>\times</code>, <code>\prod_{i=1}^{m}</code></td>
+<td>$\cdot$, $\times$, $\prod_{i=1}^{m}$</td>
+</tr>
+<tr>
+<td>Интеграл</td>
+<td><code>\int_{0}^{1} x^2\,dx</code></td>
+<td>$\int_{0}^{1} x^2\,dx$</td>
+</tr>
+<tr>
+<td>Матем. функции</td>
+<td><code>\sin x, \log x, \lim_{x\to 0}</code></td>
+<td>$\sin x, \log x, \lim_{x\to 0}$</td>
+</tr>
+<tr>
+<td>Стрелки</td>
+<td><code>\to, \rightarrow, \leftarrow, \mapsto</code></td>
+<td>$\to, \rightarrow, \leftarrow, \mapsto$</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Перед скобкой не обязательно писать <code>\left</code> или <code>\right</code>, но такой способ позволяет подгонять размер скобочки под содержание. Сравните:</p>
+<pre><code>(a + (b + (c + d)^4)^3)^2
+</code></pre>
+<p>$$
+(a + (b + (c + d)^4)^3)^2
+$$
+и</p>
+<pre><code>\left(a + \left(b + \left(c + d\right)^4\right)^3\right)^2
+</code></pre>
+<p>$$
+\left(a + \left(b + \left(c + d\right)^4\right)^3\right)^2
+$$</p>
+<p>Важно, при использовании <code>\left</code> и <code>\right</code> скобки должны составлять валидную пару, иначе будет ошибка. Сравните:</p>
+<pre><code>a)( %работает
+</code></pre>
+<p>$$
+a)( %работает
+$$
+и</p>
+<pre><code>a\right)\left( % не работает.
+</code></pre>
+<p>$$
+a\right)\left( % не работает.
+$$</p>
+<p>В предыдущем примере было показано как писать комментарии для LaTeX.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Из полезного стоит упоминуть <code>\limits</code>, которое позволяет избегать сплющивания. Сравните сумму в таблице и здесь: $\sum\limits_{k=1}^{n}$.</p>
+<p>При написании особенно длинных выражений стоит использовать блок <code>\gathered</code>, позволяющей переносить строки c помощью <code>\\</code>:</p>
+<pre><code>$$
+\begin{gathered}
+  F(x) = \sqrt[n]{\frac{x^n - 1}{\sqrt{x + \frac{1}{x}}}}
+  + \sum_{k=1}^n \binom{n}{k}  \Gamma\!\left(k^2 + 1\right) \sin\!\left(\alpha  \beta^k\right)
+  - \int_{0}^{\frac{\pi}{2}} \ln\!\left(1 + t^2\right) dt = \\
+  = 2\left(\sqrt[n]{\frac{x^n - 1}{\sqrt{x + \frac{1}{x}}}}
+  + \sum_{k=1}^n \binom{n}{k}  \Gamma\!\left(k^2 + 1\right) \sin\!\left(\alpha  \beta^k\right)
+  - \int_{0}^{\frac{\pi}{2}} \ln\!\left(1 + t^2\right) dt\right)\cdot0.5
+\end{gathered} 
+$$ 
+</code></pre>
+<p>$$
+\begin{gathered}
+  F(x) = \sqrt[n]{\frac{x^n - 1}{\sqrt{x + \frac{1}{x}}}}
+  + \sum_{k=1}^n \binom{n}{k}  \Gamma\!\left(k^2 + 1\right) \sin\!\left(\alpha  \beta^k\right)
+  - \int_{0}^{\frac{\pi}{2}} \ln\!\left(1 + t^2\right) dt = \\
+  = 2\left(\sqrt[n]{\frac{x^n - 1}{\sqrt{x + \frac{1}{x}}}}
+  + \sum_{k=1}^n \binom{n}{k}  \Gamma\!\left(k^2 + 1\right) \sin\!\left(\alpha  \beta^k\right)
+  - \int_{0}^{\frac{\pi}{2}} \ln\!\left(1 + t^2\right) dt\right)\cdot0.5
+\end{gathered} 
+$$</p>
+<p>Для создания векторов и матриц используется блок <code>pmatrix</code>, где <code>&amp;</code> разделяет столбцы, а <code>\\</code> строки:</p>
+<pre><code>$$
+\begin{pmatrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+\end{pmatrix}
+$$
+</code></pre>
+<p>$$
+\begin{pmatrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+\end{pmatrix}
+$$</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Для импорта изображений можно воспользоваться конструкцией:</p>
+<pre><code>![%альтернативное название%](%относительный путь%)
+</code></pre>
+<p>например:</p>
+<pre><code>![Image](terminal.png)
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82">Экспорт<a class="anchor-link" href="#%D0%AD%D0%BA%D1%81%D0%BF%D0%BE%D1%80%D1%82">¶</a></h3><p>Одна из главных фишек блокнота --- экспорт в html страницу (или pdf, но в html легче). Для этого необход</p>
+<p><img alt="Image" src="terminal.png"/></p>
 </div>
 </div>
 </div>
